@@ -1,7 +1,11 @@
-class Node(object):
+from GraphElement import GraphElement
 
+class Node(GraphElement):
     def __init__(self, node_id):
-        self._node_id = node_id
+        #super(GraphElement, self)
+        self._id = node_id
+        self.visited = False
 
-    def get_id(self):
-        return self._node_id
+    @property
+    def id(self):
+        return self._id
